@@ -643,28 +643,31 @@ hr {
     border-radius: 100%;
 }
 
+#bottom-recipt {
+    margin-left: 92px;
+    display: flex;
+    flex-direction: column;
+}
 #total-hr {
     margin-top: 128px;
-    margin-left: 92px;
 }
 
 #total {
     margin: 0;
-    margin-left: 92px;
-    margin-bottom: 30px;
     font-size: 28px;
 }
 
 #continue-shopping {
     text-decoration: none;
-    margin-top: 90px;
-    margin-left: 92px;
+    margin-top: 10px;
+    margin-right: 5vw;
     width: 15vw;
     background: #E2E2E2;
     color: black;
     padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 50px;
     font-size: 18px;
     font-family: var(--font-family);
@@ -673,14 +676,14 @@ hr {
 
 #checkout-btn {
     margin-top: 18px;
-    margin-left: 92px;
     width: 15vw;
     background: #806E5E;
     color: white;
     padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-radius: 50px;
+    text-align: center;
     font-size: 18px;
     font-family: var(--font-family);
     border: none;
