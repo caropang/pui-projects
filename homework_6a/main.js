@@ -27,7 +27,8 @@ function setQuantity(quantity) {
         if (q == quantity) {
             console.log(button);
             button.setAttribute("class", "quantity-clicked");
-            quantitySelected = q;
+            quantitySelected = parseInt(q);
+            addToCartBtn.innerText = `$${quantitySelected*5}.00 • Add to Cart`;
         } else {
             button.setAttribute("class", "quantity");
         }

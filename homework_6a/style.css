@@ -313,7 +313,7 @@ a {
     flex-direction: column;
 }
 
-.item-price {
+#item-price {
     margin: 0px;
 }
 
