@@ -4,7 +4,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js" type="text/javascript"></script>
+    <script defer src="main.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bun Bun Bakeshop</title>
@@ -53,10 +53,10 @@
             </p>
             <p class="order-detail-label">Quantity</p>
             <div class="quantities">
-                <button class="quantity">1</button>
-                <button class="quantity">3</button>
-                <button class="quantity">6</button>
-                <button class="quantity">12</button>
+                <button id="one-quantity" class="quantity" onclick="setQuantity(1)">1</button>
+                <button id="three-quantity" class="quantity" onclick="setQuantity(3)">3</button>
+                <button id="six-quantity" class="quantity" onclick="setQuantity(6)">6</button>
+                <button id="twelve-quantity" class="quantity" onclick="setQuantity(12)">12</button>
             </div>
             <p class="order-detail-label">Glazing</p>
             <select name="Glazing" id="glazing">

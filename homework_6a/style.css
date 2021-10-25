@@ -348,6 +348,40 @@ body {
     margin: 0px;
 }
 
+/* Inspired by: https://stackoverflow.com/questions/52707749/how-can-i-display-select-options-as-buttons */
+/* #quantities {
+    height: 48px;
+    border: none;
+    overflow: hidden;
+}
+
+#quantities:focus {
+    outline: none;
+}
+
+#quantities option {
+    width: 48px;
+    font-size: 18px;
+    padding: 12px 0;
+    text-align: center;
+    margin-right: 14px;
+    display: inline-block;
+    background: #E2E2E2;
+    border-radius: 100%;
+}
+
+#quantities option:checked {
+    width: 48px;
+    font-size: 18px;
+    padding: 12px 0;
+    text-align: center;
+    margin-right: 14px;
+    display: inline-block;
+    background-image: #a31c1c;
+    border-radius: 100%;
+} */
+
+
 .quantity {
     width: 48px;
     height: 48px;
@@ -356,6 +390,18 @@ body {
     margin-right: 5px;
     border: none;
     background: #E2E2E2;
+    font-size: 18px;
+}
+
+.quantity-clicked {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    background: #6D6D6D;
+    color: white;
     font-size: 18px;
 }
 
