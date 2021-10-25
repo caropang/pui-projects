@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="main.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bun Bun Bakeshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Universal Header -->
+    <div class="header-wrapper-shop">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html">
+                    <img class="logo" src="assets/PUI-A5-Logo.png" alt="Bun Bun Bakeshop">
+                </a>
+            </div>
+            <div class="header-right">
+                <!-- TODO: Make active looking link -->
+                <a class="header-link" href="index.html">Home</a>
+                <a class="header-link" href="menu.html">Shop</a>
+                <!-- TODO: Link About Page -->
+                <a class="header-link" href="about.html">About</a>
+                <a class="header-link" href="contact.html">Contact</a>
+                <a href="basket.html" id="basket-container">
+                    <img id="basket-img" src="assets/basket.png" alt="Basket">
+                    <p id="num-items-in-basket" class="header-link"></p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basket Content -->
+    <div class="basket-details-wrapper">
+        <div id="basket-info">
+            <p id="basket-header">Basket</p>
+            <hr>
+            <!-- List of basket items -->
+            <div id="basket-items">
+                <!-- Example Item #1 -->
+                <div class="basket-item-template">
+                    <div class="basket-item-info">
+                        <p class="basket-price">$60.00</p>
+                        <p class="basket-quantity">12 x </p>
+                        <a class="basket-name" href="original.html">Original</a>
+                        <p class="basket-glazing">w/ Sugar-Milk glaze</p>
+                    </div>
+                    <div class="basket-edit-buttons">
+                        <a class = "basket-edit-btn" href="original.html">Edit</a>
+                        <button class="remove-item-btn">X</button>
+                    </div>
+                </div>
+                <!-- Example Item #2 -->
+                <div class="basket-item-template">
+                    <div class="basket-item-info">
+                        <p class="basket-price">$30.00</p>
+                        <p class="basket-quantity">6 x </p>
+                        <a class="basket-name" href="original.html">Original</a>
+                        <p class="basket-glazing">w/ Chocolate glaze</p>
+                    </div>
+                    <div class="basket-edit-buttons">
+                        <a class="basket-edit-btn" href="original.html">Edit</a>
+                        <button class="remove-item-btn">X</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of basket items -->
+            <div id="bottom-recipt">
+                <hr id="total-hr">
+                <p id="total">Total: $90.00</p>
+                <a id="continue-shopping" href="menu.html">Continue Shopping</a>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+            
+        </div>
+        <img id="basket-side-image" src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">
+    </div>
+
+    <!-- Universal Footer -->
+    <div class="footer-wrapper">
+        <div class="footer-container">
+            <div class="footer-site-map">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="menu.html" class="footer-link">Shop</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-location">
+                <p>Based in</p>
+                <p>Squirrel Hill</p>
+                <p>Pittsburgh, PA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us</p>
+                <p>bunbun@bakeshop.com</p>
+                <p>+1 (555) 555 5555</p>
+            </div>
+        </div>
+        <a id="footer-logo" href="home.html">
+            <img class="logo" src="assets/PUI-A5-Logo.png" alt="Bun Bun Bakeshop">
+        </a>
+    </div>
+</body>
