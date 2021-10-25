@@ -4,6 +4,12 @@
 
 body {
     margin:0;
+    font-size: 18px;
+    font-family: var(--font-family);
+}
+
+a {
+    color: black;
 }
 
 /* HEADER */
@@ -549,6 +555,133 @@ body {
 }
 
 /* BASKET */
-#basket-hedaer {
+.basket-details-wrapper {
+    margin-top: 10vw;
+    margin-left: 15vw;
+    margin-right: 10vw;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    justify-content: space-between;
+}
+
+#basket-side-image {
+    margin-top: 5vw;
+    width: 35vw;
+    object-fit: cover;
+}
+
+#basket-info {
+    width: 50vw;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: black;
+    margin: 0px;
+    margin-right: 5vw;
+    margin-bottom: 10px;
+}
+
+#basket-header {
     font-size: 48px;
+    margin: 0px;
+}
+
+#basket-items {
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-item-info {
+    margin-right: 4vw;
+    float:left;
+}
+
+.basket-price {
+    margin: 0;
+    float: left;
+}
+
+.basket-quantity {
+    margin: 0px;
+    margin-left: 32px;
+    float: left;
+}
+
+.basket-name {
+    margin: 0px;
+    margin-left: 3px;
+}
+
+.basket-glazing {
+    margin: 0px;
+    margin-left: 122px;
+    font-size: 18px;
+}
+
+.basket-edit-buttons {
+    margin-right: 3vw;
+    float: right;
+}
+
+.basket-edit-btn {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.remove-item-btn {
+    height: 24px;
+    width: 24px;
+    border: none;
+    font-size: 14;
+    background: #E2E2E2;
+    border-radius: 100%;
+}
+
+#total-hr {
+    margin-top: 128px;
+    margin-left: 92px;
+}
+
+#total {
+    margin: 0;
+    margin-left: 92px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+#continue-shopping {
+    text-decoration: none;
+    margin-top: 90px;
+    margin-left: 92px;
+    width: 15vw;
+    background: #E2E2E2;
+    color: black;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: var(--font-family);
+    border: none;
+}
+
+#checkout-btn {
+    margin-top: 18px;
+    margin-left: 92px;
+    width: 15vw;
+    background: #806E5E;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: var(--font-family);
+    border: none;
 }

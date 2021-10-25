@@ -38,13 +38,42 @@
     </div>
 
     <!-- Basket Content -->
-    <div class="item-details-wrapper">
+    <div class="basket-details-wrapper">
         <div id="basket-info">
             <p id="basket-header">Basket</p>
+            <hr>
+            <div id="basket-items">
+                <div class="basket-item-template">
+                    <div class="basket-item-info">
+                        <p class="basket-price">$60.00</p>
+                        <p class="basket-quantity">12 x </p>
+                        <a class="basket-name" href="original.html">Original</a>
+                        <p class="basket-glazing">w/ Sugar-Milk glaze</p>
+                    </div>
+                    <div class="basket-edit-buttons">
+                        <a class = "basket-edit-btn" href="original.html">Edit</a>
+                        <button class="remove-item-btn">X</button>
+                    </div>
+                </div>
+                <div class="basket-item-template">
+                    <div class="basket-item-info">
+                        <p class="basket-price">$30.00</p>
+                        <p class="basket-quantity">6 x </p>
+                        <a class="basket-name" href="original.html">Original</a>
+                        <p class="basket-glazing">w/ Chocolate glaze</p>
+                    </div>
+                    <div class="basket-edit-buttons">
+                        <a class="basket-edit-btn" href="original.html">Edit</a>
+                        <button class="remove-item-btn">X</button>
+                    </div>
+                </div>
+            </div>
+            <hr id="total-hr">
+            <p id="total">Total: $90.00</p>
+            <a id="continue-shopping" href="menu.html">Continue Shopping</a>
+            <button id="checkout-btn">Checkout</button>
         </div>
-        <div id="basket-side-image">
-            <img src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">
-        </div>
+        <img id="basket-side-image" src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">
     </div>
 
     <!-- Universal Footer -->
