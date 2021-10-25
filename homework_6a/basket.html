@@ -4,7 +4,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js" type="text/javascript"></script>
+    <script defer src="main.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bun Bun Bakeshop</title>
@@ -29,8 +29,46 @@
                 <!-- TODO: Link About Page -->
                 <a class="header-link" href="about.html">About</a>
                 <a class="header-link" href="contact.html">Contact</a>
-                <a href="basket.html"><img id="basket" src="assets/basket.png" alt="Basket"></a>
+                <a href="basket.html" id="basket-container">
+                    <img id="basket-img" src="assets/basket.png" alt="Basket">
+                    <p id="num-items-in-basket" class="header-link"></p>
+                </a>
             </div>
         </div>
+    </div>
+
+    <!-- Basket Content -->
+    <div class="item-details-wrapper">
+        <div id="basket-info">
+            <p id="basket-header">Basket</p>
+        </div>
+        <div id="basket-side-image">
+            <img src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">
+        </div>
+    </div>
+
+    <!-- Universal Footer -->
+    <div class="footer-wrapper">
+        <div class="footer-container">
+            <div class="footer-site-map">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="menu.html" class="footer-link">Shop</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-location">
+                <p>Based in</p>
+                <p>Squirrel Hill</p>
+                <p>Pittsburgh, PA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us</p>
+                <p>bunbun@bakeshop.com</p>
+                <p>+1 (555) 555 5555</p>
+            </div>
+        </div>
+        <a id="footer-logo" href="home.html">
+            <img class="logo" src="assets/PUI-A5-Logo.png" alt="Bun Bun Bakeshop">
+        </a>
     </div>
 </body>

@@ -47,6 +47,22 @@ body {
     font-size: 18px;
 }
 
+#num-items-in-basket {
+    border: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+#basket-container {
+    display: inline-flex;
+}
+
+#basket-img {
+    margin-left: 24px;
+    margin-right: 0px;
+    height: 20px;
+}
+
 .page-title {
     margin: 20px;
     margin-top: 96px;
@@ -61,11 +77,7 @@ body {
     height: 64px;
 }
 
-#basket {
-    margin-left: 24px;
-    margin-right: 24px;
-    height: 20px;
-}
+
 
 /* FOOTER */
 .footer-wrapper {
@@ -427,6 +439,20 @@ body {
     border: none;
 }
 
+#added-to-cart-btn {
+    margin-top: 32px;
+    width: 15vw;
+    background: #9A9A9A;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    border: none;
+}
+
 /* CONTACT US PAGE */
 
 #contact-page-title {
@@ -520,4 +546,9 @@ body {
 
 .about-us-text {
     margin-left: 10%;
+}
+
+/* BASKET */
+#basket-hedaer {
+    font-size: 48px;
 }
