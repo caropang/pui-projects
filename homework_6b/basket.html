@@ -5,6 +5,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="main.js" type="text/javascript"></script>
+    <script defer src="cart.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bun Bun Bakeshop</title>
@@ -45,42 +46,38 @@
             <!-- List of basket items -->
             <div id="basket-items">
                 <!-- Example Item #1 -->
-                <div class="basket-item-template">
-                    <div class="basket-item-info">
-                        <p class="basket-price">$60.00</p>
-                        <p class="basket-quantity">12 x </p>
-                        <a class="basket-name" href="original.html">Original</a>
-                        <p class="basket-glazing">w/ Sugar-Milk glaze</p>
+                <template id="empty-basket">
+                    <p id="empty-basket-text">Your basket is empty.</p>
+                </template>
+                <template id="basket-item-template">
+                    <div class="basket-item">
+                        <div class="item-line-1">
+                            <p class="basket-quantity">12 x</p>
+                            <a class="basket-name" href="original.html">Original</a>
+                            <p class="basket-price">$60.00</p>
+                        </div>
+                        <div class="item-line-2">
+                            <p class="basket-glazing">w/ Sugar-Milk glaze</p>
+                            <div class="basket-edit-buttons">
+                                <!-- <a class = "basket-edit-btn" href="original.html">Edit</a> -->
+                                <button class="remove-item-btn" onclick="">X</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="basket-edit-buttons">
-                        <a class = "basket-edit-btn" href="original.html">Edit</a>
-                        <button class="remove-item-btn">X</button>
-                    </div>
-                </div>
-                <!-- Example Item #2 -->
-                <div class="basket-item-template">
-                    <div class="basket-item-info">
-                        <p class="basket-price">$30.00</p>
-                        <p class="basket-quantity">6 x </p>
-                        <a class="basket-name" href="original.html">Original</a>
-                        <p class="basket-glazing">w/ Chocolate glaze</p>
-                    </div>
-                    <div class="basket-edit-buttons">
-                        <a class="basket-edit-btn" href="original.html">Edit</a>
-                        <button class="remove-item-btn">X</button>
-                    </div>
-                </div>
+                    
+                </template>
             </div>
             <!-- End of basket items -->
+            <hr id="total-hr">
             <div id="bottom-recipt">
-                <hr id="total-hr">
                 <p id="total">Total: $90.00</p>
                 <a id="continue-shopping" href="menu.html">Continue Shopping</a>
                 <button id="checkout-btn">Checkout</button>
             </div>
-            
         </div>
-        <img id="basket-side-image" src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">
+        <img id="basket-side-image" src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">    
+    </div>
+        
     </div>
 
     <!-- Universal Footer -->

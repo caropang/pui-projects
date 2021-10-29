@@ -568,12 +568,15 @@ a {
 
 #basket-side-image {
     margin-top: 5vw;
-    width: 35vw;
+    width: 20vw;
     object-fit: cover;
 }
 
 #basket-info {
-    width: 50vw;
+    width: 60vw;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
 }
 
 hr {
@@ -581,7 +584,6 @@ hr {
     height: 3px;
     background-color: black;
     margin: 0px;
-    margin-right: 5vw;
     margin-bottom: 10px;
 }
 
@@ -597,44 +599,54 @@ hr {
     flex-direction: column;
 }
 
-.basket-item-info {
-    margin-right: 4vw;
-    float:left;
+#empty-basket-text {
+    margin: 0px;
+}
+
+.basket-item {
+    margin-right: 1vw;
+    margin-bottom: 32px;
 }
 
 .basket-price {
     margin: 0;
-    float: left;
+    text-align: right;
+    float: right;
 }
 
 .basket-quantity {
     margin: 0px;
     margin-left: 32px;
-    float: left;
+    text-align: left;
+    display: inline-block;
 }
 
 .basket-name {
     margin: 0px;
     margin-left: 3px;
+    display: inline-block;
 }
 
 .basket-glazing {
     margin: 0px;
-    margin-left: 122px;
+    margin-left: 64px;
     font-size: 18px;
+    float: left;
 }
 
 .basket-edit-buttons {
-    margin-right: 3vw;
+    margin: 0;
     float: right;
 }
 
 .basket-edit-btn {
+    margin: 0;
     font-size: 18px;
     margin-right: 10px;
 }
 
 .remove-item-btn {
+    margin: 0;
     height: 24px;
     width: 24px;
     border: none;
@@ -647,20 +659,25 @@ hr {
     margin-left: 92px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
+
 #total-hr {
     margin-top: 128px;
 }
 
 #total {
     margin: 0;
+    margin-right: 1vw;
+    text-align: right;
     font-size: 28px;
 }
 
 #continue-shopping {
+    float: right;
     text-decoration: none;
     margin-top: 10px;
-    margin-right: 5vw;
+    /* margin-right: 5vw; */
     width: 15vw;
     background: #E2E2E2;
     color: black;
@@ -670,11 +687,11 @@ hr {
     padding-right: 20px;
     border-radius: 50px;
     font-size: 18px;
-    font-family: var(--font-family);
     border: none;
 }
 
 #checkout-btn {
+    float: right;
     margin-top: 18px;
     width: 15vw;
     background: #806E5E;
