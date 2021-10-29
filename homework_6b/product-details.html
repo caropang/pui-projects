@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="main.js" type="text/javascript"></script>
-    <script defer src="cart.js" type="text/javascript"></script>
+    <script defer src="product-details.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bun Bun Bakeshop</title>
@@ -27,8 +27,7 @@
                 <!-- TODO: Make active looking link -->
                 <a class="header-link" href="index.html">Home</a>
                 <a class="header-link" href="menu.html">Shop</a>
-                <!-- TODO: Link About Page -->
-                <a class="header-link" href="about.html">About</a>
+                <a class="header-link" href="about.html" >About</a>
                 <a class="header-link" href="contact.html">Contact</a>
                 <a href="basket.html" id="basket-container">
                     <img id="basket-img" src="assets/basket.png" alt="Basket">
@@ -38,50 +37,39 @@
         </div>
     </div>
 
-    <!-- Basket Content -->
-    <div class="basket-details-wrapper">
-        <div id="basket-info">
-            <p id="basket-header">Basket</p>
-            <hr>
-            <!-- List of basket items -->
-            <div id="basket-items">
-                <!-- Example Item #1 -->
-                <template id="empty-basket">
-                    <p id="empty-basket-text">Your basket is empty.</p>
-                </template>
-                <template id="basket-item-template">
-                    <div class="basket-item">
-                        <div class="basket-item-left">
-                            <img class="basket-item-img" src="assets/original.png" alt="Original Flavor">
-                        </div>
-                        <div class="basket-item-right">
-                            <div class="item-line-1">
-                                <p class="basket-quantity">12 x</p>
-                                <a class="basket-name" href="original.html">Original</a>
-                                <p class="basket-price">$60.00</p>
-                            </div>
-                            <div class="item-line-2">
-                                <p class="basket-glazing">w/ Sugar-Milk glaze</p>
-                                <div class="basket-edit-buttons">
-                                    <!-- <a class = "basket-edit-btn" href="original.html">Edit</a> -->
-                                    <button class="remove-item-btn" onclick="">X</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </div>
-            <!-- End of basket items -->
-            <hr id="total-hr">
-            <div id="bottom-recipt">
-                <p id="total">Total: $90.00</p>
-                <a id="continue-shopping" href="menu.html">Continue Shopping</a>
-                <button id="checkout-btn">Checkout</button>
+    <!-- Product Details -->
+    <div class="item-details-wrapper">
+        <a class="back-page-btn" href="menu.html">Back to Menu</a>
+        <div class="product-images">
+            <img id="main-item-img" src="assets/original.png" alt="Original Flavor">
+            <div class="other-item-images">
+                <img class="image1" src="assets/front-rolls.png" alt="Glazed original cinnamon rolls">
+                <img class="image2" src="assets/original.jpg" alt="Multiple original cinnamon rolls">
+                <img class="image3" src="assets/about-us.jpg" alt="Original cinnamon rolls being made">
             </div>
         </div>
-        <img id="basket-side-image" src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">    
-    </div>
-        
+        <div class="item-details">
+            <p id="item-name-header">Original</p>
+            <p id="item-price">$5.00</p>
+            <p id="item-caption">Our original cinnamon roll mixed with freshly
+                 chopped sugar walnuts,  hand-kneaded and topped with a sweet 
+                 glaze of your choosing.</p>
+            <p class="order-detail-label">Quantity</p>
+            <div class="quantities">
+                <button id="one-quantity" class="quantity" onclick="setQuantity(1)">1</button>
+                <button id="three-quantity" class="quantity" onclick="setQuantity(3)">3</button>
+                <button id="six-quantity" class="quantity" onclick="setQuantity(6)">6</button>
+                <button id="twelve-quantity" class="quantity" onclick="setQuantity(12)">12</button>
+            </div>
+            <p class="order-detail-label">Glazing</p>
+            <select name="Glazing" id="glazing">
+                <option value="sugar-milk">Sugar-Milk</option>
+                <option value="vanilla-milk">Vanilla-Milk</option>
+                <option value="double-chocolate">Double-Chocolate</option>
+                <option value="none">None</option>
+            </select>
+            <button id="add-to-cart-btn" onclick="addToCartButton()">Add to Cart</button>
+        </div>
     </div>
 
     <!-- Universal Footer -->
@@ -109,3 +97,5 @@
         </a>
     </div>
 </body>
+
+</html>

@@ -3,6 +3,9 @@ var cart = storedCart ? storedCart : [];
 const storedItemsInCart = localStorage.getItem('itemsInCart');
 var itemsInCart = parseInt(storedItemsInCart ? storedItemsInCart : 0);
 
+const selectedProduct = localStorage.getItem("selectedProduct");
+var selectedProductPage = selectedProduct ? selectedProduct : "";
+
 var oneBtn = document.getElementById("one-quantity");
 var threeBtn = document.getElementById("three-quantity");
 var sixBtn = document.getElementById("six-quantity");
@@ -43,11 +46,12 @@ function setQuantity(quantity) {
     }
 }
 
-function Product(flavor, glazing, quantity, price) {
+function Product(flavor, glazing, quantity, price, image) {
     this.flavor = flavor;
     this.glazing = glazing;
     this.quantity = quantity;
     this.price = price;
+    this.image = image
 }
 
 function addToCartButton() {
@@ -61,7 +65,8 @@ function addToCartButton() {
         let temp = document.getElementById("glazing");
         let glazing = temp.options[temp.selectedIndex].innerText;
         let price = quantitySelectedPrice;
-        const item = new Product(flavor, glazing, quantity, price);
+        var image = document.getElementById("main-item-img").getAttribute("src");
+        const item = new Product(flavor, glazing, quantity, price, image);
         cart.push(item);
         console.log(typeof(itemsInCart), typeof(quantity));
         itemsInCart = itemsInCart + quantity
@@ -76,7 +81,8 @@ function addToCartButton() {
     }
 }
 
-
-
-
-// rendering cart
+function openProductDetails(name) {
+    selectedProductPage = name;
+    localStorage.setItem("selectedProduct", selectedProductPage);
+    window.location = "product-details.html";
+}

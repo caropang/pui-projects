@@ -247,7 +247,7 @@ a {
     text-decoration: underline;
 }
 
-#item-description {
+.item-description {
     margin-left: 32px;
     font-size: 18px;
 }
@@ -260,7 +260,7 @@ a {
     flex-direction: row;
 }
 
-#view-details-btn {
+.view-details-btn {
     margin-right: 10px;
     padding: 5px;
     padding-right: 10px;
@@ -270,10 +270,13 @@ a {
     color: black;
     border-radius: 10px;
     text-decoration: none;
+    font-style: italic;
+    font-size: 18px;
     font-family: "Helvetica", sans-serif;
+    cursor: pointer;
 }
 
-#quick-add-btn {
+.quick-add-btn {
     margin-right: 10px;
     padding: 5px;
     padding-right: 10px;
@@ -326,7 +329,9 @@ a {
     width: 35vw;
 }
 
-.main-item-img {
+#main-item-img {
+    border-radius: 10px;
+    margin-top: 20px;
     width: 35vw;
     height: 35vw;
     object-fit: cover;
@@ -606,6 +611,21 @@ hr {
 .basket-item {
     margin-right: 1vw;
     margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.basket-item-img {
+    margin: 0;
+    margin-left: 1vw;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.basket-item-right {
+    flex: 1;
 }
 
 .basket-price {
@@ -629,7 +649,7 @@ hr {
 
 .basket-glazing {
     margin: 0px;
-    margin-left: 64px;
+    margin-left: 80px;
     font-size: 18px;
     float: left;
 }

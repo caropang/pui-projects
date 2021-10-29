@@ -30,9 +30,10 @@ function showProductInCart(product) {
     clone.querySelector(".basket-glazing").innerText = `w/ ${product.glazing} glaze`;
     clone.querySelector(".basket-quantity").innerText = `${product.quantity} x`;
     clone.querySelector(".basket-price").innerText = `$${product.price}.00`;
-    const button = clone.querySelector(".remove-item-btn");
-    console.log(button);
+    clone.querySelector(".basket-item-img").setAttribute("src", product.image);
+    var button = clone.querySelector(".remove-item-btn");
     button.addEventListener("click", function () {
+        console.log("LSFJSLDFKSDLJ")
         // Remove item from stored cart list
         const index = cart.findIndex(function (item) {
             if ((item.flavor == product.flavor) 
@@ -45,7 +46,7 @@ function showProductInCart(product) {
         cart.splice(index, 1);
         localStorage.setItem("savedCart", JSON.stringify(cart));
         // Update displayed basket items
-        basketItems.removeChild(this.parentNode.parentNode.parentNode)
+        basketItems.removeChild(this.parentNode.parentNode.parentNode.parentNode);
         // Update total price
         totalPrice = totalPrice - product.price;
         total.innerText = `Total: $${totalPrice}.00`;
