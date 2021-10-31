@@ -5,6 +5,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="main.js" type="text/javascript"></script>
+    <script defer src="menu.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bun Bun Bakeshop</title>
@@ -39,107 +40,24 @@
 
     <div class="page-title">OUR FLAVORS</div>
 
-    <!-- Menu TODO: Add additional product detail pages-->
-    <div class="menu-wrapper">
-        <!-- Original Product Info -->
-        <div class="menu-item-wrapper">
-            <a href="original.html">
-                <img id="menu-item-img" src="assets/original.png" alt="Original Flavor">
-            </a>
-            <div class="item-info">
-                <a href="original.html"><p id="item-name">Original • $5.00</p></a>
-                <p class="item-description">Our signature original cinnamon roll. Choose from 
-                    our variety of glazings to create a classic flavor.</p>
-                <div class="menu-button-wrapper">
-                    <button class="view-details-btn" onclick="openProductDetails('original')">View Details</button>
-                    <!-- TODO: Implement Quick Add -->
-                    <a class="quick-add-btn">Quick Add</a>
+    <div id="menu-wrapper">
+        <!-- template -->
+        <template id="menu-item-template">
+            <div class="menu-item-wrapper">
+                <img class="menu-item-img" src="assets/original.png" alt="Original Flavor">
+                <div class="item-info">
+                    <p class="item-name">Original • $5.00</p>
+                    <p class="item-description">Our signature original cinnamon roll. Choose from 
+                        our variety of glazings to create a classic flavor.</p>
+                    <div class="menu-button-wrapper">
+                        <button class="view-details-btn">View Details</button>
+                        <!-- TODO: Implement Quick Add -->
+                        <a class="quick-add-btn">Quick Add</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Pumpkin Spice Product Info -->
-        <div class="menu-item-wrapper">
-            <a href="pumpkin-spice.html">
-                <img id="menu-item-img" src="assets/pumpkin-spice.png" alt="Pumpkin Spice Flavor">
-            </a>
-            <div class="item-info">
-                <a href="pumpkin-spice.html"><p id="item-name">Pumpkin Spice • $5.00</p></a>
-                <p class="item-description">Our newest seasonal flavor, pumpkin spice. Made with
-                    real pumpkin and our five spice blend to create a perfect, cozy, fall
-                    flavor.</p>
-                <div class="menu-button-wrapper">
-                    <button class="view-details-btn" onclick="openProductDetails('pumpkin-spice')">View Details</button>
-                    <!-- TODO: Implement Quick Add -->
-                    <a class="quick-add-btn">Quick Add</a>
-                </div>
-            </div>
-        </div>
-        <!-- Blackberry Product Info -->
-        <div class="menu-item-wrapper">
-            <a href="original.html">
-                <img id="menu-item-img" src="assets/blackberry.png" alt="Blackberry Flavor">
-            </a>
-            <div class="item-info">
-                <a href="original.html"><p id="item-name">Blackberry • $5.00</p></a>
-                <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="menu-button-wrapper">
-                    <button class="view-details-btn" onclick="openProductDetails('blackberry')">View Details</button>
-                    <!-- TODO: Implement Quick Add -->
-                    <a class="quick-add-btn">Quick Add</a>
-                </div>
-            </div>
-        </div>
-        <!-- Walnut Product Info -->
-        <div class="menu-item-wrapper">
-            <a href="original.html">
-                <img id="menu-item-img" src="assets/walnut.png" alt="Walnut Flavor">
-            </a>
-            <div class="item-info">
-                <a href="original.html"><p id="item-name">Walnut • $5.00</p></a>
-                <p class="item-description">Our original cinnamon roll mixed with freshly
-                     chopped sugar walnuts.</p>
-                <div class="menu-button-wrapper">
-                    <button class="view-details-btn" onclick="openProductDetails('walnut')">View Details</button>
-                    <!-- TODO: Implement Quick Add -->
-                    <a class="quick-add-btn">Quick Add</a>
-                </div>
-            </div>
-        </div>
-        <!-- Caramel Pecan Product Info -->
-        <div class="menu-item-wrapper">
-            <a href="original.html">
-                <img id="menu-item-img" src="assets/caramel-pecan.png" alt="Caramel Pecan Flavor">
-            </a>
-            <div class="item-info">
-                <a href="original.html"><p id="item-name">Caramel Pecan • $5.00</p></a>
-                <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="menu-button-wrapper">
-                    <button class="view-details-btn" onclick="openProductDetails('caramel-pecan')">View Details</button>
-                    <!-- TODO: Implement Quick Add -->
-                    <a class="quick-add-btn">Quick Add</a>
-                </div>
-            </div>
-        </div>
-        <!-- Original (GF) Product Info -->
-        <div class="menu-item-wrapper">
-            <a href="original.html">
-                <img id="menu-item-img" src="assets/original.png" alt="Original Flavor (Gluten Free)">
-            </a>
-            <div class="item-info">
-                <a href="original.html"><p id="item-name">Original (GF) • $5.00</p></a>
-                <p class="item-description">Our signature original cinnamon roll made with gluten free 
-                    alternatives.</p>
-                <div class="menu-button-wrapper">
-                    <button class="view-details-btn" onclick="openProductDetails('original-gf')">View Details</button>
-                    <!-- TODO: Implement Quick Add -->
-                    <a class="quick-add-btn">Quick Add</a>
-                </div>
-            </div>
-        </div>
+        </template>
     </div>
-
     <!-- Universal Footer -->
     <div class="footer-wrapper">
         <div class="footer-container">

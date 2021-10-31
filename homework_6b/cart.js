@@ -33,7 +33,6 @@ function showProductInCart(product) {
     clone.querySelector(".basket-item-img").setAttribute("src", product.image);
     var button = clone.querySelector(".remove-item-btn");
     button.addEventListener("click", function () {
-        console.log("LSFJSLDFKSDLJ")
         // Remove item from stored cart list
         const index = cart.findIndex(function (item) {
             if ((item.flavor == product.flavor) 
