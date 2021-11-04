@@ -57,7 +57,8 @@
                         <div class="basket-item-right">
                             <div class="item-line-1">
                                 <p class="basket-quantity">12 x</p>
-                                <a class="basket-name" href="original.html">Original</a>
+                                <!-- <a class="basket-name" href="original.html">Original</a> -->
+                                <button class="basket-name">Original</button>
                                 <p class="basket-price">$60.00</p>
                             </div>
                             <div class="item-line-2">
@@ -78,10 +79,23 @@
                 <a id="continue-shopping" href="menu.html">Continue Shopping</a>
                 <button id="checkout-btn">Checkout</button>
             </div>
+            <div id="wishlist">
+                <p id="wishlist-header">Wishlist</p>
+                <hr>
+                <div id="wishlist-items">
+                    <template id="wishlist-template">
+                        <div class="wishlist-info">
+                            <img class="wishlist-item-img" src="assets/original.png" alt="Original Flavor">
+                            <button class="basket-name">Original</button>
+                        </div>
+                        <!-- <div class="basket-item-right">
+                            <button class="basket-name">Original</button>
+                        </div> -->
+                    </template>
+                </div>
+            </div>
         </div>
         <img id="basket-side-image" src="assets/unbaked-rolls.png" alt="Unbaked cinnamon rolls">    
-    </div>
-        
     </div>
 
     <!-- Universal Footer -->

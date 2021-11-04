@@ -12,6 +12,10 @@ a {
     color: black;
 }
 
+button {
+    font-family: var(--font-family);
+}
+
 /* HEADER */
 .header-wrapper {
     position: fixed;
@@ -275,7 +279,8 @@ a {
     cursor: pointer;
 }
 
-.quick-add-btn {
+.add-to-wishlist-btn {
+    font-size: 18px;
     margin-right: 10px;
     padding: 5px;
     padding-right: 10px;
@@ -284,6 +289,8 @@ a {
     background-color: #E2E2E2;
     border-radius: 10px;
     font-family: "Helvetica", sans-serif;
+    font-style: normal;
+    cursor: pointer;
 }
 
 /* ITEM DETAILS PAGE */
@@ -374,40 +381,6 @@ a {
     margin: 0px;
 }
 
-/* Inspired by: https://stackoverflow.com/questions/52707749/how-can-i-display-select-options-as-buttons */
-/* #quantities {
-    height: 48px;
-    border: none;
-    overflow: hidden;
-}
-
-#quantities:focus {
-    outline: none;
-}
-
-#quantities option {
-    width: 48px;
-    font-size: 18px;
-    padding: 12px 0;
-    text-align: center;
-    margin-right: 14px;
-    display: inline-block;
-    background: #E2E2E2;
-    border-radius: 100%;
-}
-
-#quantities option:checked {
-    width: 48px;
-    font-size: 18px;
-    padding: 12px 0;
-    text-align: center;
-    margin-right: 14px;
-    display: inline-block;
-    background-image: #a31c1c;
-    border-radius: 100%;
-} */
-
-
 .quantity {
     width: 48px;
     height: 48px;
@@ -439,6 +412,17 @@ a {
     font-size: 18px;
 }
 
+#add-to-wishlist-details-btn {
+    font-size: 18px;
+    margin-top: 32px;
+    margin-left: 10px;
+    background-color: #E2E2E2;
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+    width: 50px;
+}
+
 #add-to-cart-btn {
     margin-top: 32px;
     width: 15vw;
@@ -448,7 +432,6 @@ a {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 50px;
-    font-family: var(--font-family);
     font-size: 18px;
     border: none;
 }
@@ -645,6 +628,11 @@ hr {
 }
 
 .basket-name {
+    background: none;
+    cursor: pointer;
+    border: none;
+    text-decoration: underline;
+    font-size: 24px;
     margin: 0px;
     margin-left: 3px;
     display: inline-block;
@@ -728,4 +716,38 @@ hr {
     font-size: 18px;
     font-family: var(--font-family);
     border: none;
+}
+
+
+#wishlist {
+    margin-top: 48px;
+}
+
+#wishlist-header {
+    font-size: 36px;
+    margin: 0px;
+}
+
+#wishlist-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.wishlist-template {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.wishlist-item-img {
+    margin: 10px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.wishlist-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

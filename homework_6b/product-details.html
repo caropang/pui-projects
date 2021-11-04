@@ -41,7 +41,7 @@
     <div class="item-details-wrapper">
         <a class="back-page-btn" href="menu.html">Back to Menu</a>
         <div class="product-images">
-            <img id="main-item-img" src="assets/original.png" alt="Original Flavor">
+            <img id="main-item-img" src="" alt="Original Flavor">
             <div class="other-item-images">
                 <img class="image1" src="assets/front-rolls.png" alt="Glazed original cinnamon rolls">
                 <img class="image2" src="assets/original.jpg" alt="Multiple original cinnamon rolls">
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="item-details">
-            <p id="item-name-header">Original</p>
+            <p id="item-name-header" item-id="">Original</p>
             <p id="item-price">$5.00</p>
             <p id="item-caption">Our original cinnamon roll mixed with freshly
                  chopped sugar walnuts,  hand-kneaded and topped with a sweet 
@@ -68,7 +68,11 @@
                 <option value="double-chocolate">Double-Chocolate</option>
                 <option value="none">None</option>
             </select>
-            <button id="add-to-cart-btn" onclick="addToCartButton()">Add to Cart</button>
+            <div id="cart-wishlist-buttons">
+                <button id="add-to-cart-btn" onclick="addToCartButton()">Add to Cart</button>
+                <button id="add-to-wishlist-details-btn">♡</button>
+            </div>
+            
         </div>
     </div>
 

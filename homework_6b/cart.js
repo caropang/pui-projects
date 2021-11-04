@@ -1,32 +1,56 @@
-// const storedCart = JSON.parse(localStorage.getItem("savedCart"));
-// const cart = storedCart ? storedCart : [];
 var basketItems = document.getElementById("basket-items");
 const itemTemplate = document.getElementById("basket-item-template");
 const emptyTemplate = document.getElementById("empty-basket");
 const total = document.getElementById("total");
 var totalPrice = 0;
+var wishlistItems = document.getElementById("wishlist-items");
+const wishlistTemplate = document.getElementById("wishlist-template");
 
 function renderCart() {
     if (cart.length == 0) {
-        console.log("empty basket");
         const clone = emptyTemplate.content.cloneNode(true);
         basketItems.appendChild(clone);
         total.innerText = "Total: $0.00";
     } else {
         totalPrice = 0;
         for (let item of cart){
-            console.log(item);
             showProductInCart(item);
             totalPrice = totalPrice + item.price;
         }
         total.innerText = `Total: $${totalPrice}.00`
     }
+    // Render wishlist
+    if (wishlist.length != 0) {
+        for (let item of wishlist) {
+            showProductInWishlist(item);
+        }
+    }
 }
 renderCart();
 
+function showProductInWishlist(productName) {
+    product = products[productName];
+    const clone = wishlistTemplate.content.cloneNode(true);
+    var wishlistName = clone.querySelector(".basket-name");
+    wishlistName.innerText = product.flavor;
+    wishlistName.addEventListener("click", function () {
+        openProductDetails(productName);
+    });
+    clone.querySelector(".wishlist-item-img").setAttribute("src", product.image);
+    wishlistItems.appendChild(clone);
+}
+
 function showProductInCart(product) {
     var clone = itemTemplate.content.cloneNode(true);
-    clone.querySelector(".basket-name").innerText = product.flavor;
+    var basketName = clone.querySelector(".basket-name");
+    basketName.innerText = product.flavor;
+    basketName.addEventListener("click", function () {
+        openProductDetails(product.itemId);
+    });
+    // clone.querySelector(".basket-name").addEventListener("click", function () {
+    //     openProductDetails(thisProductName);
+    // });
+    console.log("hiiii", product);
     clone.querySelector(".basket-glazing").innerText = `w/ ${product.glazing} glaze`;
     clone.querySelector(".basket-quantity").innerText = `${product.quantity} x`;
     clone.querySelector(".basket-price").innerText = `$${product.price}.00`;
@@ -41,7 +65,6 @@ function showProductInCart(product) {
                 return true;
             }
         });
-        console.log("original cart", cart.length, cart, index);
         cart.splice(index, 1);
         localStorage.setItem("savedCart", JSON.stringify(cart));
         // Update displayed basket items
@@ -51,7 +74,6 @@ function showProductInCart(product) {
         total.innerText = `Total: $${totalPrice}.00`;
         // Update number of items in header
         itemsInCart = itemsInCart - product.quantity;
-        console.log("new items in cart", itemsInCart);
         localStorage.setItem("itemsInCart", itemsInCart);
         if (itemsInCart != 0) {
             itemsInCartElement.innerText = itemsInCart; 
@@ -63,4 +85,3 @@ function showProductInCart(product) {
     });
     basketItems.appendChild(clone);
 }
-
