@@ -47,10 +47,6 @@ function showProductInCart(product) {
     basketName.addEventListener("click", function () {
         openProductDetails(product.itemId);
     });
-    // clone.querySelector(".basket-name").addEventListener("click", function () {
-    //     openProductDetails(thisProductName);
-    // });
-    console.log("hiiii", product);
     clone.querySelector(".basket-glazing").innerText = `w/ ${product.glazing} glaze`;
     clone.querySelector(".basket-quantity").innerText = `${product.quantity} x`;
     clone.querySelector(".basket-price").innerText = `$${product.price}.00`;
@@ -85,3 +81,5 @@ function showProductInCart(product) {
     });
     basketItems.appendChild(clone);
 }
+
+

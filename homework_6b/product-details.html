@@ -70,11 +70,34 @@
             </select>
             <div id="cart-wishlist-buttons">
                 <button id="add-to-cart-btn" onclick="addToCartButton()">Add to Cart</button>
-                <button id="add-to-wishlist-details-btn">♡</button>
+                <button id="add-to-wishlist-details-btn">♡ Add to Wishlist</button>
             </div>
             
         </div>
     </div>
+
+    <!-- Carousel -->
+    <p id="relatedProducts">Related Products</p>
+    <hr id="relatedProductsHr">
+    <div class="carousel-container">
+        <div class="carousel-item fade">
+            <img class="carousel-img" src="assets/caramel-pecan.png" alt="Caramel Pecan Flavor">
+            <button class="carousel-caption" onclick="openProductDetails('caramel-pecan')">Caramel Pecan Flavor</button>
+        </div>
+        <div class="carousel-item fade">
+            <img class="carousel-img" src="assets/walnut.png" alt="Walnut Flavor">
+            <button class="carousel-caption" onclick="openProductDetails('walnut')">Walnut Flavor</button>
+        </div>
+        <div class="carousel-item fade">
+            <img class="carousel-img" src="assets/pumpkin-spice.png" alt="Pumpkin Spice Flavor">
+        <button class="carousel-caption" onclick="openProductDetails('pumpkin-spice')">Pumpkin Spice Flavor</button>
+    </div>
+    <div class="arrow-buttons">
+        <a class="arrow" onclick="advanceCarousel()">&#10094;</a>
+        <a class="arrow" onclick="rewindCarousel()">&#10095;</a>
+    </div>
+  </div>
+  <br>
 
     <!-- Universal Footer -->
     <div class="footer-wrapper">

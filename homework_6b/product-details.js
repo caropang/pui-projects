@@ -33,11 +33,11 @@ function setQuantity(quantity) {
 }
 
 function addToCartButton() {
-    // Change add to cart button
-    addToCartBtn.setAttribute("id", "added-to-cart-btn");
-    addToCartBtn.innerText = "Added to Cart";
     // Add item to cart
     if (quantitySelected != 0) {
+        // Change add to cart button
+        addToCartBtn.setAttribute("id", "added-to-cart-btn");
+        addToCartBtn.innerText = "Added to Cart";   
         let flavor = document.getElementById("item-name-header").innerText;
         let quantity = quantitySelected;
         let temp = document.getElementById("glazing");
@@ -75,17 +75,43 @@ function renderProductDetails(productName) {
                 return item == productName;
             });
             wishlist.splice(wishlistIndex, 1);
-            this.innerText = "♡";
+            this.innerText = "♡ Add to Wishlist";
         } else { // Add item to wishlist
             wishlist.push(productName);
-            this.innerText = "♥︎";
+            this.innerText = "♥︎ In Wishlist";
         }
         // Update local storage wishlist
         localStorage.setItem("savedWishlist", JSON.stringify(wishlist));
     });
     if (wishlist.includes(productName)) {
-        wishListBtn.innerText = "♥︎";
+        wishListBtn.innerText = "♥︎ In Wishlist";
     }
 }
 renderProductDetails(selectedProductPage);
+
+var slideIndex = 0;
+var slides = document.getElementsByClassName("carousel-item");
+function showSlides(n) {
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+  }
+showSlides(slideIndex);
+
+function advanceCarousel() {
+    slideIndex --;
+    showSlides(slideIndex);
+}
+
+function rewindCarousel() {
+    slideIndex ++;
+    showSlides(slideIndex);
+}
 

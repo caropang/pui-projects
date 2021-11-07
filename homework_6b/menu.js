@@ -27,16 +27,16 @@ function renderMenu() {
                     return item == itemName;
                 });
                 wishlist.splice(wishlistIndex, 1);
-                this.innerText = "♡";
+                this.innerText = "♡ Add to Wishlist";
             } else { // Add item to wishlist
                 wishlist.push(itemName);
-                this.innerText = "♥︎";
+                this.innerText = "♥︎ In Wishlist";
             }
             // Update local storage wishlist
             localStorage.setItem("savedWishlist", JSON.stringify(wishlist));
         });
         if (wishlist.includes(name)) {
-            clone.querySelector(".add-to-wishlist-btn").innerText = "♥︎";
+            clone.querySelector(".add-to-wishlist-btn").innerText = "♥︎ In Wishlist";
         }
         menuItems.appendChild(clone);
     }
